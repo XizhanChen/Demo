@@ -62,10 +62,4 @@ public class PaperServiceTest {
 
         System.out.println(paperService.quqeryAll());
     }
-
-    @Test
-    public void pulltest("西展"){
-
-      
-    }
 }
