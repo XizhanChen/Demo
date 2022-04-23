@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>论文删除</title>
+</head>
+<body>
+
+    <form th:action="@{/delete/deletepaper}" method="post">
+        <!--将post请求转化为delete-->
+        <input type="hidden" name="_method" value="delete">
+        <!--配置需要的参数-->
+        论文id: <input type="text" name="paper_id">
+        <input type="submit">
+    </form>
+
+
+</body>
+</html>

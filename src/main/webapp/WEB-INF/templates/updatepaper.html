@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>更新论文</title>
+</head>
+<body>
+        <form th:action="@{/update/updatepaper}" method="post" enctype="multipart/form-data">
+            <!--将post请求转化为delete-->
+            <input type="hidden" name="_method" value="put">
+            <!--配置需要的参数-->
+            论文id: <input type="text" name="paper_id">
+            论文题目: <input type="text" name="name">
+            论文作者: <input type="text" name="autor">
+            论文地址：<input type="text" name="path">
+            <input type="submit">
+        </form>
+    </form>
+</body>
+</html>

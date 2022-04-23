@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xizhan.dao.PaperMapper">
+    <!--resultType 需要写全路径-->
+    <select id="queryById" resultType="com.xizhan.entity.Paper">
+        select paper_id, name, autor from `paper` where paper_id = #{paperid}
+    </select>
+
+    <!--List<Paper> quqeryAll(@Param("offset") int offset, @Param("limit" ) int limit);-->
+    <select id="queryAll" resultType="com.xizhan.entity.Paper">
+        select * from `paper`
+    </select>
+
+    <!--void add(@Param("paper") Paper paper);-->
+    <!--可以直接使用实现类的属性名为键，属性值为值-->
+    <insert id="add">
+       insert into `paper` values(#{paperid},#{name},#{autor})
+    </insert>
+
+    <!--void delectById(@Param("paperid") int paperid);-->
+    <delete id="deleteById">
+        delete from `paper`
+        where paper_id = #{paperid}
+    </delete>
+
+    <!--void updateById(@Param("paperid" ) int paperid, @Param("name") String name, @Param("autor") String autor );-->
+    <update id="updateById">
+        update `paper`
+        set name = #{name},autor =#{autor}}
+       where paper_id = #{paperid}
+    </update>
+
+</mapper>

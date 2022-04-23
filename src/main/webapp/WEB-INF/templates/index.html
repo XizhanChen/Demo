@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    <h1>欢迎来到论文查询系统</h1>
+    <a th:href="@{/queryall}">查询全部论文</a><br/>
+    <a th:href="@{/querybyid}">根据id查询论文</a><br/>
+    <a th:href="@{/add}">添加论文</a><br/>
+    <a th:href="@{/delete}">删除论文</a><br/>
+    <a th:href="@{/update}">更新论文</a><br/>
+</body>
+</html>

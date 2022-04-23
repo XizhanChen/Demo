@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xizhan.dao.PaperFileMapper">
+    <!--void addByName(PaperFile paperFile);-->
+    <insert id="addByName">
+        insert into `paper_path` values (#{name}, #{path})
+    </insert>
+
+    <!--/*String[] queryAllKey();*/-->
+    <select id="queryAllKey" resultType="String">
+        select name from `paper_path`
+    </select>
+
+    <!--String queryByName(String name);-->
+    <select id="queryByName" resultType="String">
+        select path from `paper_path` where name = #{name}
+    </select>
+
+</mapper>

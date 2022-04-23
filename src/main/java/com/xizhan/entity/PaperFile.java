@@ -1,0 +1,44 @@
+package com.xizhan.entity;
+
+/**
+ * @author shkstart
+ * @create 2022-04-14 18:08
+ */
+public class PaperFile {
+
+    private String name;
+
+    private String path;
+
+    public PaperFile() {
+    }
+
+    public PaperFile(String name, String path) {
+        this.name = name;
+        this.path = path;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    @Override
+    public String toString() {
+        return "PaperFile{" +
+                "name='" + name + '\'' +
+                ", path='" + path + '\'' +
+                '}';
+    }
+}
