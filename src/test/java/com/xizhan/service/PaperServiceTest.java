@@ -63,4 +63,9 @@ public class PaperServiceTest {
         System.out.println(paperService.quqeryAll());
     }
 
+    @Test
+    public void pulltest(){
+
+      
+    }
 }
