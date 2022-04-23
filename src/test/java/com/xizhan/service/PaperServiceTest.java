@@ -64,7 +64,7 @@ public class PaperServiceTest {
     }
 
     @Test
-    public void pulltest(){
+    public void pulltest("西展"){
 
       
     }
